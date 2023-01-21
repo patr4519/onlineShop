@@ -10,6 +10,7 @@ const cats = [
 ];
 
 export const Main = () => {
+    const [categoryId, setCategoryId] = React.useState(0);
     const [searchValue, setSearchValue] = React.useState('');
     const [collections, setCollections] = React.useState([]);
 
@@ -34,18 +35,23 @@ export const Main = () => {
             <ul className="tags">
                 {
                     cats.map((item, index) => (
-                        <li key={index}>{item.name}</li>
+                        <li 
+                        key={item.name}
+                        onClick={() => setCategoryId(index)}
+                        className={categoryId === index ? 'active' : ''}>{item.name}</li>
                     ))
                 }
             </ul>
             <div className="content">
                 {
-                    collections.map((item, index) => (
-                        <Collection 
-                        key={index} 
-                        name={item.name} 
-                        photo={item.photos}
-                        price={item.price}
+                    collections.filter((item) => {
+                        return item.name.toLowerCase().includes(searchValue.toLowerCase())
+                    }).map((item, index) => (
+                        <Collection
+                            key={index}
+                            name={item.name}
+                            photo={item.photos}
+                            price={item.price}
                         />
                     ))
                 }
