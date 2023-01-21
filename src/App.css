@@ -108,6 +108,7 @@ main {
   padding: 0;
   width: 160px;
   position: absolute;
+  margin-left: 5px;
 }
 
 li {
