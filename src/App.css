@@ -128,6 +128,7 @@ li {
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   width: 800px;
   justify-content: space-around;
   margin: auto;
@@ -139,7 +140,6 @@ li {
   margin: 5px;
   border: 1px solid black;
   border-radius: 10px;
-  background-color: rgb(227, 227, 227);
   display: flex;
   flex-direction: column;
 }

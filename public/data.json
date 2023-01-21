@@ -4,7 +4,7 @@
         "name": "Iphone 13",
         "price": "$899",
         "photos": [
-            "https://images.unsplash.com/photo-1591337676887-a217a6970a8a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2080&q=80"
+            "https://avatars.mds.yandex.net/get-mpic/5251502/img_id6904501887217302707.jpeg/orig"
         ]
     }, 
     {
@@ -12,7 +12,7 @@
         "name": "Google Pixel",
         "price": "$699",
         "photos": [
-            "https://images.unsplash.com/photo-1520189123429-6a76abfe7906?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fGdvb2dsZSUyMHBpeGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+            "https://avatars.mds.yandex.net/get-mpic/4968510/img_id3072096773171162905.jpeg/orig"
         ]
     }, 
     {
@@ -20,7 +20,55 @@
         "name": "Xiaomi",
         "price": "$399",
         "photos": [
-            "https://images.unsplash.com/photo-1624434207284-727cf0e6ea8e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            "https://avatars.mds.yandex.net/get-mpic/6214739/img_id4821694038336166091.jpeg/orig"
+        ]
+    }, 
+    {
+        "category": 2,
+        "name": "HUAWEI MatePad",
+        "price": "$299",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/6277643/img_id7054236455380541953.jpeg/orig"
+        ]
+    },
+    {
+        "category": 2,
+        "name": "Xiaomi Redmi Pad",
+        "price": "$259",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/7464534/img_id5929621382538501496.jpeg/orig"
+        ]
+    },
+    {
+        "category": 2,
+        "name": "Samsung Galaxy Tab",
+        "price": "$199",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/7150546/img_id5027460039757475126.jpeg/orig"
+        ]
+    },
+    {
+        "category": 3,
+        "name": "Apple AirPods Pro 2",
+        "price": "$199",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/7179065/img_id4030892675689895998.png/orig"
+        ]
+    },
+    {
+        "category": 3,
+        "name": " Samsung Galaxy Buds",
+        "price": "$199",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/4386141/img_id5258459655690084904.png/orig"
+        ]
+    },
+    {
+        "category": 3,
+        "name": "Sennheiser",
+        "price": "$199",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/4080064/img_id1438840051990076934.jpeg/orig"
         ]
     }
 ]
