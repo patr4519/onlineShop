@@ -6,7 +6,7 @@ body {
   font-family: Oswald;
 }
 
-/* ---------------- header ---------------- */
+/* ---------------- header start ---------------- */
 header {
   display: flex;
   width: 100%;
@@ -55,13 +55,50 @@ header {
   height: 90%
 }
 
-/* ---------------- header ---------------- */
+/* ---------------- header end ---------------- */
+
+
+/* ---------------- mainPanel start ---------------- */
+
+.mainPanel {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  height: 60px;
+}
+
+.inputForm {
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+.inputSearch {
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 0px;
+}
+
+.basket {
+  display: flex;
+  align-items: center;
+}
+
+.basketIMG {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+/* ---------------- mainPanel end ---------------- */
 
 
 
 
 
-/* ---------------- footer ---------------- */
+/* ---------------- footer start ---------------- */
 
 footer {
   display: flex;
@@ -74,4 +111,4 @@ footer {
   font-size: 1.3rem;
 }
 
-/* ---------------- footer ---------------- */
+/* ---------------- footer end ---------------- */

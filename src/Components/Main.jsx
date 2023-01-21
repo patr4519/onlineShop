@@ -9,9 +9,12 @@ const cats = [
   ];
 
 export const Main = () => {
+    const [searchValue, setSearchValue] = React.useState('');
+
     return (
         <main>
-            <MainPanel />
+            <MainPanel searchValue={searchValue} setSearchValue={setSearchValue}/>
+            <h1 className="title">Our products</h1>
         </main>
     );
 }
