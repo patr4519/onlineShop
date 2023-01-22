@@ -1,7 +1,7 @@
 import React from "react";
 import { Basket } from "./Basket";
 
-export const MainPanel = ({setSearchValue, searchValue, basket}) => {
+export const MainPanel = ({setSearchValue, searchValue, basket, openBasket }) => {
     return (
         <div className="mainPanel">
             <div className="inputForm">
@@ -14,6 +14,7 @@ export const MainPanel = ({setSearchValue, searchValue, basket}) => {
                 />
             </div>
             <Basket 
+            openBasket={openBasket}
             basket={basket}/>
         </div>
     );

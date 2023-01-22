@@ -15,7 +15,7 @@ export const Main = () => {
     const [searchValue, setSearchValue] = React.useState('');
     const [collections, setCollections] = React.useState([]);
     const [basket, setBasket] = React.useState([]);
-    const [basketList, setBasketList] = React.useState(true);
+    const [basketList, setBasketList] = React.useState(false);
 
     React.useEffect(() => {
         console.log('fetching data from mock api');
@@ -35,9 +35,14 @@ export const Main = () => {
         setBasket((prev) => [...prev, collections[index]]);
     }
 
+    const openBasket = () => {
+        setBasketList(!basketList)
+    }
+
     return (
         <main>
-            <MainPanel 
+            <MainPanel
+            openBasket={openBasket}
             searchValue={searchValue} 
             setSearchValue={setSearchValue} 
             basket={basket} />
