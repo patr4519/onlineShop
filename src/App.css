@@ -168,7 +168,43 @@ li {
   justify-content: space-between;
 }
 
+/* ---------------- basket list start ---------------- */
 
+
+
+/* ---------------- basket list start ---------------- */
+
+.basketList {
+  width: 1000px;
+  height: 500px;
+  background-color: antiquewhite;
+  position: absolute;
+  top: 204px;
+  left: 241px;
+  border: 1px solid black;
+}
+
+.yourBasket {
+  text-align: center;
+}
+
+.basketItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.basketItem > div {
+  margin: 10px;
+}
+
+.itemIcon {
+  width: 50px;
+  height: 75px;
+}
+
+.basketTitles {
+  text-align: center;
+}
 
 /* ---------------- footer start ---------------- */
 

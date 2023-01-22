@@ -1,6 +1,7 @@
 import React from "react";
 import { MainPanel } from "./MainPanel";
 import { Collection } from "./Collection";
+import { BasketList } from "./BasketList";
 
 const cats = [
     { "name": "All" },
@@ -14,6 +15,7 @@ export const Main = () => {
     const [searchValue, setSearchValue] = React.useState('');
     const [collections, setCollections] = React.useState([]);
     const [basket, setBasket] = React.useState([]);
+    const [basketList, setBasketList] = React.useState(true);
 
     React.useEffect(() => {
         console.log('fetching data from mock api');
@@ -69,6 +71,9 @@ export const Main = () => {
                         ))
                 }
             </div>
+            {
+                basketList && <BasketList basket={basket}/>
+            }
         </main>
     );
 }
