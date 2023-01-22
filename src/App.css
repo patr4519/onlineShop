@@ -4,7 +4,9 @@
 
 body {
   font-family: Oswald;
+  background-image: linear-gradient(327deg, #fff 0%, #cecece 100%);
 }
+
 
 /* ---------------- header start ---------------- */
 header {
@@ -74,8 +76,9 @@ header {
 }
 
 .inputSearch {
+  width: 200px;
   height: 30px;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-top: 5px;
   border-radius: 5px;
   padding: 0px;
@@ -102,6 +105,12 @@ header {
   width: 50px;
   height: 50px;
   margin-right: 5px;
+}
+
+.searchIMG {
+  width: 25px;
+  height: 25px;
+  margin-left: 30px;
 }
 
 /* --------------- mainPanel end -------------- */
@@ -142,7 +151,7 @@ li {
 }
 
 .itemPhoto {
-  width: 200px;
+  width: 210px;
   height: 300px;
 }
 
@@ -154,13 +163,14 @@ li {
 }
 
 .collection {
+  background-color: white;
   width: 250px;
   padding: 20px;
   margin: 5px;
-  border: 1px solid black;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  box-shadow: 10px 5px 5px #868686;
 }
 
 .bottomItem {
@@ -177,11 +187,11 @@ li {
 .basketList {
   width: 1000px;
   height: 600px;
-  background-color: antiquewhite;
+  background-color: rgb(252, 252, 252);
   position: absolute;
   top: 204px;
   left: 241px;
-  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .yourBasket {
@@ -193,7 +203,7 @@ li {
   justify-content: space-between;
 }
 
-.basketItem > div {
+.basketItem>div {
   margin: 10px;
 }
 
