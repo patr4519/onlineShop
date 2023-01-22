@@ -8,7 +8,7 @@ export const Collection = ({ name, photo, price, addToBasket, index }) => {
                 <div className="itemName">{name}</div>
                 <div className="itemPrice">{price}</div>
             </div>
-            <button onClick={() => addToBasket(index)}>Into Basket</button>
+            <button onClick={() => addToBasket(index)} className='button-55'>Into Basket</button>
         </div>
     );
 }
