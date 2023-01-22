@@ -6,6 +6,9 @@ export const BasketList = ({ basket, openBasket }) => {
         <div className="basketList">
             <h2 className="yourBasket">Your Basket</h2>
             {
+                basket.length === 0 ? <h1 className="centered">Empty</h1> : ''
+            }
+            {
                 basket.map((item, index) => {
                     return <BasketItem key={index} item={item} openBasket={openBasket}/>
                 })
