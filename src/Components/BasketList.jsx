@@ -10,6 +10,11 @@ export const BasketList = ({ basket, openBasket }) => {
                     return <BasketItem key={index} item={item} openBasket={openBasket}/>
                 })
             }
+            <div className="outer" onClick={openBasket}>
+                <div className="inner">
+                    <label>Close</label>
+                </div>
+            </div>
         </div>
     );
 }
