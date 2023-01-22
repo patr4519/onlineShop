@@ -1,11 +1,11 @@
 import React from "react";
-import basket from "../img/basket.svg";
+import basketIMG from "../img/basket.svg";
 
-export const Basket = ({countItems}) => {
+export const Basket = ({ basket }) => {
     return (
         <div className="basket">
-            <img src={basket} alt='basket' className="basketIMG"/>
-            <span className="countItems">{countItems}</span>
+            <img src={basketIMG} alt='basketIMG' className="basketIMG" />
+            <span className="countItems">{basket.length}</span>
         </div>
     );
 }   

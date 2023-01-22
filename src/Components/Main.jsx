@@ -13,7 +13,6 @@ export const Main = () => {
     const [categoryId, setCategoryId] = React.useState(0);
     const [searchValue, setSearchValue] = React.useState('');
     const [collections, setCollections] = React.useState([]);
-    const [countItems, setCountItems] = React.useState(0);
     const [basket, setBasket] = React.useState([]);
 
     React.useEffect(() => {
@@ -31,7 +30,6 @@ export const Main = () => {
     }, [categoryId])
 
     const addToBasket = (index) => {
-        setCountItems(countItems + 1);
         setBasket((prev) => [...prev, collections[index]]);
     }
 
@@ -40,7 +38,7 @@ export const Main = () => {
             <MainPanel 
             searchValue={searchValue} 
             setSearchValue={setSearchValue} 
-            countItems={countItems} />
+            basket={basket} />
 
             <h1 className="ourProducts">Our products</h1>
             <ul className="tags">
