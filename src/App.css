@@ -218,12 +218,20 @@ li {
   box-shadow: 10px 5px 5px #868686;
 }
 
-.closeIMG {
-  width: 30px;
-  height: 30px;
+.closeWrapper {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+.closeIMG {
+  width: 30px;
+  height: 30px;
+}
+
+.closeIMG:hover {
+  background-color: #be3144;
+  border-radius: 15px;
 }
 
 .yourBasket {

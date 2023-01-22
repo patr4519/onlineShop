@@ -77,7 +77,7 @@ export const Main = () => {
                 }
             </div>
             {
-                basketList && <BasketList basket={basket}/>
+                basketList && <BasketList basket={basket} openBasket={openBasket}/>
             }
         </main>
     );
