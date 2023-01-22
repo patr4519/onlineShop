@@ -10,19 +10,19 @@ export const BasketItem = ({ item, openBasket }) => {
             </div>
             <div className="itemName">
                 <p className="basketTitles">NAME</p>
-                <div>{item.name}</div>
+                <div className="centered">{item.name}</div>
             </div>
             <div className="itemPrice">
                 <p className="basketTitles">PRICE</p>
-                <div>{item.price}</div>
+                <div className="centered">{item.price}</div>
             </div>
             <div className="counters">
                 <p className="basketTitles">COUNTERS</p>
-                <div>counters</div>
+                <div className="centered">counters</div>
             </div>
             <div className="total">
                 <p className="basketTitles">TOTAL</p>
-                <div>Item total: {item.price}</div>
+                <div className="centered">Item total: {item.price}</div>
             </div>
             <div className="closeWrapper" onClick={openBasket}>
                 <img className="closeIMG" src={closeIMG} alt='close' />
