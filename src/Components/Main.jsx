@@ -13,6 +13,8 @@ export const Main = () => {
     const [categoryId, setCategoryId] = React.useState(0);
     const [searchValue, setSearchValue] = React.useState('');
     const [collections, setCollections] = React.useState([]);
+    const [countItems, setCountItems] = React.useState(0);
+    const [basket, setBasket] = React.useState([]);
 
     React.useEffect(() => {
         console.log('fetching data from mock api');
@@ -28,9 +30,18 @@ export const Main = () => {
             })
     }, [categoryId])
 
+    const addToBasket = (index) => {
+        setCountItems(countItems + 1);
+        setBasket((prev) => [...prev, collections[index]]);
+    }
+
     return (
         <main>
-            <MainPanel searchValue={searchValue} setSearchValue={setSearchValue} />
+            <MainPanel 
+            searchValue={searchValue} 
+            setSearchValue={setSearchValue} 
+            countItems={countItems} />
+
             <h1 className="ourProducts">Our products</h1>
             <ul className="tags">
                 {
@@ -50,10 +61,12 @@ export const Main = () => {
                         })
                         .map((item, index) => (
                             <Collection
+                                index={index}
                                 key={index}
                                 name={item.name}
                                 photo={item.photos}
                                 price={item.price}
+                                addToBasket={addToBasket}
                             />
                         ))
                 }
