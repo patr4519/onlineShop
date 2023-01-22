@@ -1,9 +1,10 @@
 import React from "react";
+import closeIMG from "../img/closeIMG.svg";
 
 export const BasketItem = ({item}) => {
     return (
         <div className="basketItem">
-            <div className="products">
+            <div className="product">
                 <p className="basketTitles">PRODUCTS</p>
                 <img className="itemIcon" src={item.photos} alr='photo'></img>
             </div>
@@ -23,6 +24,7 @@ export const BasketItem = ({item}) => {
                 <p className="basketTitles">TOTAL</p>
                 <div>Item total: {item.price}</div>
             </div>
+            <img className="closeIMG" src={closeIMG} alt='close'/>
         </div>
     );
 }
