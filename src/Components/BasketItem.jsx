@@ -1,7 +1,7 @@
 import React from "react";
 
 export const BasketItem = ({ item, openBasket }) => {
-    const [counter, setCounter] = React.useState(0);
+    const [counter, setCounter] = React.useState(1);
 
     return (
         <div className="basketItem">
@@ -19,11 +19,17 @@ export const BasketItem = ({ item, openBasket }) => {
             </div>
             <div className="counters">
                 <p className="basketTitles">COUNTERS</p>
-                <div className="centered">counters</div>
+                <div className="centered">
+                    <div className="counterWrapper">
+                        <div className="plusMinus" onClick={() => setCounter(counter - 1)}>-</div>
+                        <div className="counter">{counter}</div>
+                        <div className="plusMinus" onClick={() => setCounter(counter + 1)}>+</div>
+                    </div>
+                </div>
             </div>
             <div className="total">
                 <p className="basketTitles">TOTAL</p>
-                <div className="centered">Item total: {item.price}</div>
+                <div className="centered">Item total: {parseFloat(item.price)*counter}$</div>
             </div>
         </div>
     );
