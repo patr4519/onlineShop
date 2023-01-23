@@ -1,12 +1,15 @@
 import React from "react";
 
-export const BasketItem = ({ item }) => {
+export const BasketItem = ({ item, calceTotalPrice }) => {
     const [counter, setCounter] = React.useState(1);
 
     const getTotalPrice = () => {
         let totalPrice = 0;
         totalPrice = parseFloat(item.price) * counter;
         if (totalPrice < 0) return 0;
+
+        calceTotalPrice(totalPrice);
+
         return totalPrice;
     }
 

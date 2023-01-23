@@ -226,14 +226,15 @@ li {
   height: 120px;
   box-shadow: 0px 5px 11px #868686;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* ---------------- basket list start ---------------- */
 
 .basketList {
   width: 1000px;
-  height: 600px;
+  /* height: 600px; */
   background-color: rgb(252, 252, 252);
   position: absolute;
   top: 204px;

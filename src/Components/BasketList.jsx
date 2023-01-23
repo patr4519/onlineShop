@@ -3,6 +3,13 @@ import { BasketItem } from "./BasketItem";
 import { BasketResult } from "./BasketResult";
 
 export const BasketList = ({ basket, openBasket }) => {
+    const [countItems, setCountItems] = React.useState(basket.length);
+    const [totalPrice, setTotalPrice] = React.useState(0);
+
+    const calceTotalPrice = (price) => {
+        console.log(price);
+    }
+
     return (
         <div className="basketList">
             <div className="outer" onClick={openBasket}>
@@ -16,10 +23,12 @@ export const BasketList = ({ basket, openBasket }) => {
             }
             {
                 basket.map((item, index) => {
-                    return <BasketItem key={index} item={item} />
+                    return <BasketItem key={index} item={item} calceTotalPrice={calceTotalPrice}/>
                 })
             }
-            <BasketResult />
+            <BasketResult 
+            countItems={countItems} 
+            totalPrice={totalPrice} />
         </div>
     );
 }
