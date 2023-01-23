@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BasketItem = ({ item, openBasket }) => {
+export const BasketItem = ({ item }) => {
     const [counter, setCounter] = React.useState(1);
 
     const getTotalPrice = () => {
@@ -42,7 +42,6 @@ export const BasketItem = ({ item, openBasket }) => {
             </div>
             <div className="total">
                 <p className="basketTitles">TOTAL</p>
-                {/* <div className="centered">Item total: {parseFloat(item.price)*counter}$</div> */}
                 <div className="centered">{`Item total: ${getTotalPrice()}$`}</div>
             </div>
         </div>

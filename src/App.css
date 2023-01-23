@@ -221,7 +221,13 @@ li {
 
 /* ---------------- basket list start ---------------- */
 
-
+.basketResult {
+  width: 300px;
+  height: 120px;
+  box-shadow: 0px 5px 11px #868686;
+  margin: auto;
+  margin-top: 10px;
+}
 
 /* ---------------- basket list start ---------------- */
 
@@ -335,6 +341,11 @@ footer {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 }
 
+.checkout {
+  margin-left: 70px;
+  margin-top: 5px;
+  background-color: #e8e8e8;
+}
 
 /* ---------------- button close start ---------------- */
 
@@ -400,3 +411,9 @@ label {
 }
 
 /* ---------------- button close end ---------------- */
+
+.top {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
