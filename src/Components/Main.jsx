@@ -34,7 +34,8 @@ export const Main = () => {
     }
 
     const deleteItem = (item) => {
-        
+        let updatedBasket = basket.filter(element => element.name !== item.name)
+        setBasket(updatedBasket);
     }
 
     const openBasket = () => {
