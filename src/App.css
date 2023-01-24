@@ -417,6 +417,7 @@ label {
     width: 500px;
     margin: auto;
   }
+
   .tags > li {
     margin: 3px;
     padding: 3px 5px;
@@ -426,5 +427,46 @@ label {
   }
   .continueB {
     margin-left: 363px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .content {
+    width: 260px;
+  }
+  .tags {
+    flex-wrap: wrap;
+    width: 270px;
+    justify-content: center;
+  }
+  .tags > li {
+    width: 120px;
+  }
+  .inputSearch  {
+    width: 125px;
+  }
+  .products {
+    padding-top: 16px;
+    font-size: 20px;
+  }
+  .inputForm {
+    margin-left: 0px;
+  }
+  .titleName {
+    font-size: 20px;
+  }
+  .myName {
+    font-size: 20px;
+    width: 100px;
+  }
+  .myLink {
+    font-size: 20px;
+    width: 100px;
+  }
+  .basketList {
+    width: 360px;
+  }
+  .continueB {
+    margin-left: 150px;
   }
 }
