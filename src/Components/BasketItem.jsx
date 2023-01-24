@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BasketItem = ({ item }) => {
+export const BasketItem = ({ item, deleteItem }) => {
     const [counter, setCounter] = React.useState(1);
 
     const getTotalPrice = () => {
@@ -44,6 +44,7 @@ export const BasketItem = ({ item }) => {
                 <p className="basketTitles">TOTAL</p>
                 <div className="centered">Item total: <span className="itemCost">{getTotalPrice()}</span>$</div>
             </div>
+            <button onClick={() => deleteItem(item)}>del item</button>
         </div>
     );
 }

@@ -3,7 +3,7 @@ import { BasketItem } from "./BasketItem";
 import { BasketResult } from "./BasketResult";
 import { ContinueButton } from "./ContinueButton";
 
-export const BasketList = ({ basket, openBasket }) => {
+export const BasketList = ({ basket, openBasket, deleteItem }) => {
     const [countItems, setCountItems] = React.useState(basket.length);
     const [totalPrice, setTotalPrice] = React.useState(0);
     const [continueButton, setContinueButton] = React.useState(true);
@@ -41,7 +41,7 @@ export const BasketList = ({ basket, openBasket }) => {
             }
             {
                 basket.map((item, index) => {
-                    return <BasketItem key={index} item={item} />
+                    return <BasketItem key={index} item={item} deleteItem={deleteItem}/>
                 })
             }
             {

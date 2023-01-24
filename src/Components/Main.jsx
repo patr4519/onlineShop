@@ -33,6 +33,10 @@ export const Main = () => {
         setBasket((prev) => [...prev, collections[index]]);
     }
 
+    const deleteItem = (item) => {
+        
+    }
+
     const openBasket = () => {
         setBasketList(!basketList)
     }
@@ -75,7 +79,7 @@ export const Main = () => {
                 }
             </div>
             {
-                basketList && <BasketList basket={basket} openBasket={openBasket}/>
+                basketList && <BasketList basket={basket} openBasket={openBasket} deleteItem={deleteItem}/>
             }
         </main>
     );
