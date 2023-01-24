@@ -56,7 +56,7 @@ export const Main = () => {
                     ))
                 }
             </ul>
-            <div className="content">
+            <div className={`content ${basketList ? 'hidden' : 'visible'}`}>
                 {
                     collections
                         .filter((item) => {

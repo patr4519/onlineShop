@@ -42,7 +42,6 @@ export const BasketItem = ({ item }) => {
             </div>
             <div className="total">
                 <p className="basketTitles">TOTAL</p>
-                {/* <div className="centered">{`Item total: ${getTotalPrice()}$`}</div> */}
                 <div className="centered">Item total: <span className="itemCost">{getTotalPrice()}</span>$</div>
             </div>
         </div>
