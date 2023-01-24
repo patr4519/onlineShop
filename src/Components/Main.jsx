@@ -18,8 +18,6 @@ export const Main = () => {
     const [basketList, setBasketList] = React.useState(false);
 
     React.useEffect(() => {
-        console.log('fetching data from mock api');
-
         fetch(`https://63a4a0c9821953d4f2b9c0b5.mockapi.io/photo_collections?${categoryId ? `category=${categoryId}` : ''}`)
             .then((res) => res.json())
             .then((json) => {

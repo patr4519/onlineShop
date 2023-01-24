@@ -418,3 +418,9 @@ label {
   display: flex;
   justify-content: space-between;
 }
+
+.continueB {
+  margin-left: 462px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
