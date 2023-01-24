@@ -1,6 +1,14 @@
 import React from "react";
 
 export const BasketResult = ({ countItems, totalPrice }) => {
+    const test = () => {
+        let totalCost = 0;
+        let items = document.querySelectorAll('.itemCost');
+        for (let node of items) {
+            totalCost += +node.textContent;
+        }
+        console.log('Total cost: ' + totalCost);
+    }
 
     return (
         <div className="basketResult">
@@ -13,6 +21,7 @@ export const BasketResult = ({ countItems, totalPrice }) => {
                 <div>{countItems}</div>
             </div>
             <button className="button-55 checkout" onClick={() => alert('All done!')}>Proceed to Checkout</button>
+            <button onClick={test}>click</button>
         </div>
     );
 }

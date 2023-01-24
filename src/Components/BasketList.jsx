@@ -7,7 +7,7 @@ export const BasketList = ({ basket, openBasket }) => {
     const [totalPrice, setTotalPrice] = React.useState(0);
 
     const calceTotalPrice = (price) => {
-        console.log(price);
+        
     }
 
     return (
