@@ -44,7 +44,7 @@ export const BasketItem = ({ item, deleteItem }) => {
                 <p className="basketTitles">TOTAL</p>
                 <div className="centered">Item total: <span className="itemCost">{getTotalPrice()}</span>$</div>
             </div>
-            <button onClick={() => deleteItem(item)}>del item</button>
+            <button className="button-24" onClick={() => deleteItem(item)}>Remove</button>
         </div>
     );
 }
