@@ -17,11 +17,14 @@ export const Main = () => {
     const [basket, setBasket] = React.useState([]);
     const [basketList, setBasketList] = React.useState(false);
     const [isLoading, setIsLoading] = React.useState(true);
-    const [page, setPage] = React.useState(0);  
+    const [page, setPage] = React.useState(1);
 
     React.useEffect(() => {
         setIsLoading(true);
-        fetch(`https://63a4a0c9821953d4f2b9c0b5.mockapi.io/photo_collections?${categoryId ? `category=${categoryId}` : ''}`)
+
+        const category = categoryId ? `category=${categoryId}` : '';
+
+        fetch(`https://63a4a0c9821953d4f2b9c0b5.mockapi.io/photo_collections?page=${page}&limit=9&${category}`)
             .then((res) => res.json())
             .then((json) => {
                 setCollections(json);
@@ -33,7 +36,7 @@ export const Main = () => {
             .finally(() => {
                 setIsLoading(false);
             })
-    }, [categoryId])
+    }, [categoryId, page])
 
     const addToBasket = (index) => {
         setBasket((prev) => [...prev, collections[index]]);
@@ -51,10 +54,10 @@ export const Main = () => {
     return (
         <main>
             <MainPanel
-            openBasket={openBasket}
-            searchValue={searchValue} 
-            setSearchValue={setSearchValue} 
-            basket={basket} />
+                openBasket={openBasket}
+                searchValue={searchValue}
+                setSearchValue={setSearchValue}
+                basket={basket} />
 
             <h1 className="ourProducts">Our products</h1>
             <ul className="tags">
@@ -86,11 +89,14 @@ export const Main = () => {
                 }
             </div>
             {
-                basketList && <BasketList basket={basket} openBasket={openBasket} deleteItem={deleteItem}/>
+                basketList && <BasketList basket={basket} openBasket={openBasket} deleteItem={deleteItem} />
             }
             <ul className="pagination">
+                {/* {
+                    [...Array(collections.length / 3)].map((_, i) => <li key={i} onClick={() => setPage(i + 1)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
+                } */}
                 {
-                    [...Array(collections.length/3)].map((_, i) => <li key={i} onClick={() => setPage(i)} className={page === i ? 'active' : 0}>{i+1}</li>)
+                    [...Array(5)].map((_, i) => <li key={i} onClick={() => setPage(i + 1)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
                 }
             </ul>
         </main>
