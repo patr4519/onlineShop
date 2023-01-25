@@ -6,7 +6,31 @@
         "photos": [
             "https://avatars.mds.yandex.net/get-mpic/5251502/img_id6904501887217302707.jpeg/orig"
         ]
-    }, 
+    },
+    {
+        "category": 1,
+        "name": "HUAWEI Mate Xs 2",
+        "price": "1299$",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/7464534/img_id7042647574857270346.jpeg/orig"
+        ]
+    },
+    {
+        "category": 1,
+        "name": "Iphone 12",
+        "price": "799$",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/5215227/img_id7951336339042945793.jpeg/orig"
+        ]
+    },
+    {
+        "category": 1,
+        "name": "Samsung Galaxy S22",
+        "price": "999$",
+        "photos": [
+            "https://avatars.mds.yandex.net/get-mpic/7665750/img_id1344425218075133819.png/orig"
+        ]
+    },  
     {
         "category": 1,
         "name": "Google Pixel",

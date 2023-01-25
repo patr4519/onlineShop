@@ -96,7 +96,7 @@ export const Main = () => {
                     [...Array(collections.length / 3)].map((_, i) => <li key={i} onClick={() => setPage(i + 1)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
                 } */}
                 {
-                    [...Array(5)].map((_, i) => <li key={i} onClick={() => setPage(i + 1)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
+                    [...Array(2)].map((_, i) => <li key={i} onClick={() => setPage(i + 1)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
                 }
             </ul>
         </main>
