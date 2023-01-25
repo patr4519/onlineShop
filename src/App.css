@@ -498,6 +498,7 @@ label {
     display: flex;
     width: 500px;
     margin: auto;
+    margin-top: 0px;
   }
 
   .tags>li {
