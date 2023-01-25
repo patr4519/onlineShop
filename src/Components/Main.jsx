@@ -51,6 +51,11 @@ export const Main = () => {
         setBasketList(!basketList)
     }
 
+    const changeCategory = (index) => {
+        setCategoryId(index);
+        setPage(1);
+    }
+
     return (
         <main>
             <MainPanel
@@ -65,7 +70,7 @@ export const Main = () => {
                     cats.map((item, index) => (
                         <li
                             key={item.name}
-                            onClick={() => setCategoryId(index)}
+                            onClick={() => changeCategory(index)}
                             className={categoryId === index ? 'active' : ''}>{item.name}</li>
                     ))
                 }
@@ -92,9 +97,6 @@ export const Main = () => {
                 basketList && <BasketList basket={basket} openBasket={openBasket} deleteItem={deleteItem} />
             }
             <ul className="pagination">
-                {/* {
-                    [...Array(collections.length / 3)].map((_, i) => <li key={i} onClick={() => setPage(i + 1)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
-                } */}
                 {
                     [...Array(2)].map((_, i) => <li key={i} onClick={() => setPage(i + 1)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
                 }
