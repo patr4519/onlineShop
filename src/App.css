@@ -8,7 +8,8 @@ body {
 }
 
 main {
-  min-height: 1400px
+  min-height: 1460px;
+  position: relative;
 }
 
 header {
@@ -447,12 +448,16 @@ label {
 
 .loading {
   margin: auto;
+  margin-top: 50px;
 }
 
 .pagination {
+  position: absolute;
+  bottom: 0;
   display: flex;
   justify-content: center;
-  margin-right: 50px;
+  width: 100%;
+  margin-left: -25px;
 }
 .pagination > li {
   width: 50px;
