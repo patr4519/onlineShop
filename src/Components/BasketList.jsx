@@ -3,7 +3,7 @@ import { BasketItem } from "./BasketItem";
 import { BasketResult } from "./BasketResult";
 import { ContinueButton } from "./ContinueButton";
 
-export const BasketList = ({ basket, openBasket, deleteItem }) => {
+export const BasketList = ({ basket, openBasket, deleteItem, clearBasket }) => {
     const [countItems, setCountItems] = React.useState(basket.length);
     const [totalPrice, setTotalPrice] = React.useState(0);
     const [continueButton, setContinueButton] = React.useState(true);
@@ -49,6 +49,9 @@ export const BasketList = ({ basket, openBasket, deleteItem }) => {
             }
             {
                 showResult && <BasketResult totalPrice={totalPrice} countItems={countItems}/>  
+            }
+            {
+                basket.length > 0 && <button className="button-55 clearB" onClick={clearBasket}>Clear basket</button>
             }
         </div>
     );

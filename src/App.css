@@ -459,13 +459,21 @@ label {
   width: 100%;
   margin-left: -25px;
 }
-.pagination > li {
+
+.pagination>li {
   width: 50px;
   text-align: center;
   margin: 5px;
   box-shadow: 5px 5px 5px #868686;
 }
 
+.clearB {
+  margin-left: 360px;
+  background-color: #FF4742;
+  color: white;
+  font-size: 15px;
+  border-radius: 9px;
+}
 
 
 

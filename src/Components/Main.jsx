@@ -42,6 +42,10 @@ export const Main = () => {
         setBasket((prev) => [...prev, collections[index]]);
     }
 
+    const clearBasket = () => {
+        setBasket([]);
+    }
+
     const deleteItem = (item) => {
         let updatedBasket = basket.filter(element => element.name !== item.name)
         setBasket(updatedBasket);
@@ -94,7 +98,7 @@ export const Main = () => {
                 }
             </div>
             {
-                basketList && <BasketList basket={basket} openBasket={openBasket} deleteItem={deleteItem} />
+                basketList && <BasketList basket={basket} openBasket={openBasket} deleteItem={deleteItem} clearBasket={clearBasket}/>
             }
             <ul className="pagination">
                 {
