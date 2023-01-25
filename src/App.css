@@ -445,7 +445,9 @@ label {
   opacity: .5;
 }
 
-
+.loading {
+  margin: auto;
+}
 
 
 

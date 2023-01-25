@@ -16,6 +16,7 @@ export const Main = () => {
     const [collections, setCollections] = React.useState([]);
     const [basket, setBasket] = React.useState([]);
     const [basketList, setBasketList] = React.useState(false);
+    const [isLoading, setIsLoading] = React.useState(true);
 
     React.useEffect(() => {
         fetch(`https://63a4a0c9821953d4f2b9c0b5.mockapi.io/photo_collections?${categoryId ? `category=${categoryId}` : ''}`)
@@ -26,6 +27,9 @@ export const Main = () => {
             .catch((err) => {
                 console.warn(err);
                 alert('Error on fetching data');
+            })
+            .finally(() => {
+                setIsLoading(false);
             })
     }, [categoryId])
 
@@ -63,7 +67,7 @@ export const Main = () => {
             </ul>
             <div className={`content ${basketList ? 'hidden' : 'visible'}`}>
                 {
-                    collections
+                    isLoading ? <h2 className="loading">Loading...</h2> : (collections
                         .filter((item) => {
                             return item.name.toLowerCase().includes(searchValue.toLowerCase())
                         })
@@ -76,7 +80,7 @@ export const Main = () => {
                                 price={item.price}
                                 addToBasket={addToBasket}
                             />
-                        ))
+                        )))
                 }
             </div>
             {
