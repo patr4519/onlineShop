@@ -449,6 +449,28 @@ label {
   margin: auto;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-right: 50px;
+}
+.pagination > li {
+  width: 50px;
+  text-align: center;
+  margin: 5px;
+  box-shadow: 5px 5px 5px #868686;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 

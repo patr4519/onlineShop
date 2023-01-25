@@ -17,6 +17,7 @@ export const Main = () => {
     const [basket, setBasket] = React.useState([]);
     const [basketList, setBasketList] = React.useState(false);
     const [isLoading, setIsLoading] = React.useState(true);
+    const [page, setPage] = React.useState(1);  
 
     React.useEffect(() => {
         setIsLoading(true);
@@ -87,6 +88,11 @@ export const Main = () => {
             {
                 basketList && <BasketList basket={basket} openBasket={openBasket} deleteItem={deleteItem}/>
             }
+            <ul className="pagination">
+                {
+                    [...Array(collections.length/3)].map((_, i) => <li>{i+1}</li>)
+                }
+            </ul>
         </main>
     );
 }
