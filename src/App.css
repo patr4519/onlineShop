@@ -580,14 +580,17 @@ label {
   }
 
   .continueB {
-    margin-left: 150px;
+    margin-left: 143px;
   }
   .clearB {
-    margin-left: 141px;
+    margin-left: 134px;
   }
   .basketItem {
     justify-content: space-between;
-    font-size: 14px;
+    font-size: 12px;
+  }
+  .basketItem > div {
+    margin: 0;
   }
   .itemIcon {
     margin-left: 8px;
