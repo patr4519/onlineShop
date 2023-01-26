@@ -66,7 +66,8 @@ export const Main = () => {
 
     const changePage = (i) => {
         setPage(i + 1);
-        scrollTop();
+        // scrollTop();
+        setTimeout(scrollTop, 200);
     }
 
     return (
