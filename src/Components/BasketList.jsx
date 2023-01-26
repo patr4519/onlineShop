@@ -45,10 +45,10 @@ export const BasketList = ({ basket, openBasket, deleteItem, clearBasket }) => {
                 })
             }
             {
-                continueButton && <ContinueButton showResultBlock={showResultBlock}/>
+                (continueButton && basket.length > 0) && <ContinueButton showResultBlock={showResultBlock}/>
             }
             {
-                showResult && <BasketResult totalPrice={totalPrice} countItems={countItems}/>  
+                (showResult && basket.length > 0) && <BasketResult totalPrice={totalPrice} countItems={countItems}/>  
             }
             {
                 basket.length > 0 && <button className="button-55 clearB" onClick={clearBasket}>Clear basket</button>
