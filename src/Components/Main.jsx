@@ -60,6 +60,15 @@ export const Main = () => {
         setPage(1);
     }
 
+    const scrollTop = () => {
+        window.scrollTo(0, 0)
+    }
+
+    const changePage = (i) => {
+        setPage(i + 1);
+        scrollTop();
+    }
+
     return (
         <main>
             <MainPanel
@@ -102,9 +111,10 @@ export const Main = () => {
             }
             <ul className="pagination">
                 {
-                    [...Array(2)].map((_, i) => <li key={i} onClick={() => setPage(i + 1)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
+                    [...Array(2)].map((_, i) => <li key={i} onClick={() => changePage(i)} className={page === i + 1 ? 'active' : 0}>{i + 1}</li>)
                 }
             </ul>
         </main>
     );
 }
+
