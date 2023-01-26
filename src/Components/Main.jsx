@@ -60,13 +60,10 @@ export const Main = () => {
         setPage(1);
     }
 
-    const scrollTop = () => {
-        window.scrollTo(0, 0)
-    }
-
     const changePage = (i) => {
+        const scrollTop = () => window.scrollTo(0, 0);
+
         setPage(i + 1);
-        // scrollTop();
         setTimeout(scrollTop, 200);
     }
 
@@ -108,7 +105,11 @@ export const Main = () => {
                 }
             </div>
             {
-                basketList && <BasketList basket={basket} openBasket={openBasket} deleteItem={deleteItem} clearBasket={clearBasket}/>
+                basketList && <BasketList 
+                basket={basket} 
+                openBasket={openBasket} 
+                deleteItem={deleteItem} 
+                clearBasket={clearBasket}/>
             }
             <ul className="pagination">
                 {
