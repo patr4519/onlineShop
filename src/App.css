@@ -468,7 +468,8 @@ label {
 }
 
 .clearB {
-  margin-left: 360px;
+  margin-left: 450px;
+  margin-top: 10px;
   background-color: #FF4742;
   color: white;
   font-size: 15px;
@@ -544,11 +545,11 @@ label {
   }
 
   .tags>li {
-    width: 120px;
+    width: 123px;
   }
 
   .inputSearch {
-    width: 125px;
+    width: 165px;
   }
 
   .products {
@@ -557,7 +558,7 @@ label {
   }
 
   .inputForm {
-    margin-left: 0px;
+    margin-left: -30px;
   }
 
   .titleName {
@@ -582,7 +583,7 @@ label {
     margin-left: 150px;
   }
   .clearB {
-    margin-left: 140px;
+    margin-left: 141px;
   }
   .basketItem {
     justify-content: space-between;
@@ -594,5 +595,9 @@ label {
   .button-24 {
     padding: 7px 0px;
     font-size: 11px;
+  }
+  .searchIMG {
+    width: 18px;
+    height: 18px;
   }
 }
