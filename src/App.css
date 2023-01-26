@@ -522,18 +522,45 @@ label {
   .continueB {
     margin-left: 354px;
   }
+
   .clearB {
     margin-left: 345px;
   }
+
   .basketResult {
     margin-bottom: 10px;
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 450px) {
   main {
     min-height: 4080px;
   }
+
   .content {
     width: 260px;
   }
@@ -582,24 +609,32 @@ label {
   .continueB {
     margin-left: 143px;
   }
+
   .clearB {
     margin-left: 134px;
   }
+
   .basketItem {
     justify-content: space-between;
     font-size: 12px;
   }
-  .basketItem > div {
+
+  .basketItem>div {
     margin: 0;
   }
+
   .itemIcon {
     margin-left: 8px;
+    width: 40px;
+    height: 65px;
   }
+
   .button-24 {
     padding: 7px 0px;
     font-size: 11px;
     margin-top: 65px;
   }
+
   .searchIMG {
     width: 18px;
     height: 18px;
