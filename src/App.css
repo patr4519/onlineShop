@@ -498,7 +498,7 @@ label {
 
 @media only screen and (max-width: 1200px) {
   main {
-    min-height: 1450px;
+    min-height: 1505px;
   }
 
   .tags {
@@ -519,11 +519,20 @@ label {
   }
 
   .continueB {
-    margin-left: 363px;
+    margin-left: 354px;
+  }
+  .clearB {
+    margin-left: 345px;
+  }
+  .basketResult {
+    margin-bottom: 10px;
   }
 }
 
 @media only screen and (max-width: 450px) {
+  main {
+    min-height: 4080px;
+  }
   .content {
     width: 260px;
   }
@@ -571,5 +580,19 @@ label {
 
   .continueB {
     margin-left: 150px;
+  }
+  .clearB {
+    margin-left: 140px;
+  }
+  .basketItem {
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  .itemIcon {
+    margin-left: 8px;
+  }
+  .button-24 {
+    padding: 7px 0px;
+    font-size: 11px;
   }
 }
