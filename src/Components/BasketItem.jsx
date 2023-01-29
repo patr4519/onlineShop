@@ -1,6 +1,6 @@
 import React from "react";
 
-export const BasketItem = ({ item, deleteItem }) => {
+export const BasketItem = ({ item, deleteItem, basket }) => {
     const [counter, setCounter] = React.useState(1);
 
     const getTotalPrice = () => {

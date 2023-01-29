@@ -41,7 +41,7 @@ export const BasketList = ({ basket, openBasket, deleteItem, clearBasket }) => {
             }
             {
                 basket.map((item, index) => {
-                    return <BasketItem key={index} item={item} deleteItem={deleteItem}/>
+                    return <BasketItem key={item.name} item={item} deleteItem={deleteItem} basket={basket}/>
                 })
             }
             {
