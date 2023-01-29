@@ -11,10 +11,16 @@ export const BasketItem = ({ item, deleteItem, basket }) => {
     }
 
     const counterMinus = () => {
-        if (counter > 0) {
-            setCounter(counter - 1)
-        }
+        setCounter(counter - 1)
     }
+
+    React.useEffect(() => {
+        if (counter === 0) {
+            setTimeout(() => {
+                deleteItem(item)
+            }, 300)
+        }
+    }, [counter])
 
     return (
         <div className="basketItem">
