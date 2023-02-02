@@ -29,30 +29,32 @@ export const BasketList = ({ basket, openBasket, deleteItem, clearBasket }) => {
     }
 
     return (
-        <div className="basketList">
-            <div className="outer" onClick={openBasket}>
-                <div className="inner">
-                    <label>Close</label>
+        <div className="overlay">
+            <div className="basketList">
+                <div className="outer" onClick={openBasket}>
+                    <div className="inner">
+                        <label>Close</label>
+                    </div>
                 </div>
+                <h2 className="yourBasket">Your Basket</h2>
+                {
+                    basket.length === 0 ? <h1 className="centered">Empty</h1> : ''
+                }
+                {
+                    basket.map((item, index) => {
+                        return <BasketItem key={item.name} item={item} deleteItem={deleteItem} basket={basket} />
+                    })
+                }
+                {
+                    (continueButton && basket.length > 0) && <ContinueButton showResultBlock={showResultBlock} />
+                }
+                {
+                    (showResult && basket.length > 0) && <BasketResult totalPrice={totalPrice} countItems={countItems} />
+                }
+                {
+                    basket.length > 0 && <button className="button-55 clearB" onClick={clearBasket}>Clear basket</button>
+                }
             </div>
-            <h2 className="yourBasket">Your Basket</h2>
-            {
-                basket.length === 0 ? <h1 className="centered">Empty</h1> : ''
-            }
-            {
-                basket.map((item, index) => {
-                    return <BasketItem key={item.name} item={item} deleteItem={deleteItem} basket={basket}/>
-                })
-            }
-            {
-                (continueButton && basket.length > 0) && <ContinueButton showResultBlock={showResultBlock}/>
-            }
-            {
-                (showResult && basket.length > 0) && <BasketResult totalPrice={totalPrice} countItems={countItems}/>  
-            }
-            {
-                basket.length > 0 && <button className="button-55 clearB" onClick={clearBasket}>Clear basket</button>
-            }
         </div>
     );
 }
