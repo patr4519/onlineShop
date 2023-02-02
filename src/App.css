@@ -612,7 +612,8 @@ label {
   }
 
   .basketList {
-    width: 360px;
+    width: 405px;
+    margin-top: -15px; 
   }
 
   .continueB {
